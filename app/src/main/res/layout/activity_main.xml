@@ -10,9 +10,9 @@
         android:id="@+id/textMontoInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="124dp"
-        android:text="Monto Inicial"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="132dp"
+        android:text="PrecioTotal"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,11 +22,10 @@
         android:id="@+id/editTextMontoInicial"
         android:layout_width="205dp"
         android:layout_height="100dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="88dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textMontoInicial"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,8 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="300dp"
-        android:text="Inicial"
+        android:layout_marginTop="256dp"
+        android:text="Cuota Inicial"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,11 +43,10 @@
         android:id="@+id/editTextInicial"
         android:layout_width="205dp"
         android:layout_height="100dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="208dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textInicial"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,8 +54,8 @@
         android:id="@+id/textCuotas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="472dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="372dp"
         android:text="Cuotas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -66,12 +64,38 @@
         android:id="@+id/editTextCuotas"
         android:layout_width="205dp"
         android:layout_height="100dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="424dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="64dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textCuotas"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="64dp"
+        android:text="Calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCuotas" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="84dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate"
+        tools:visibility="invisible" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
