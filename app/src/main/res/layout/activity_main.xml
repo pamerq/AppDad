@@ -60,42 +60,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextCuotas"
-        android:layout_width="205dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="332dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="64dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/calculate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textCuotas"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerCuotas"
+        android:layout_width="196dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCuotas"
+        tools:layout_marginBottom="20dp"
+        tools:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="92dp"
         android:text="Calcular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCuotas" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCuotas" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="48dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculate"
         tools:visibility="invisible" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
