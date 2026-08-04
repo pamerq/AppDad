@@ -59,7 +59,17 @@ export const styles = StyleSheet.create({
       fontSize: 20,
       color: '#3C3C3C',
     },
-  
+    
+    pickerContainer: {
+      height: 60,
+      borderWidth: 1,
+      borderColor: '#D9D9D9',
+      borderRadius: 18,
+      justifyContent: 'center',
+      overflow: 'hidden',
+      backgroundColor: '#FFF',
+    },
+    
     button: {
       marginTop: 32,
       height: 60,
