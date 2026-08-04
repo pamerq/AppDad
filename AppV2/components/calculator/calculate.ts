@@ -1,8 +1,8 @@
 export function calculate(
-    valorTotal: number,
-    inicial: number,
-    cuotas: number
+  valorTotal: number,
+  inicial: number,
+  cuotas: number,
 ): number {
-    const montoFinanciado = valorTotal - inicial;
-    return montoFinanciado / cuotas;
+  const montoFinanciado = valorTotal - inicial;
+  return montoFinanciado / cuotas;
 }
