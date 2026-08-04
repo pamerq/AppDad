@@ -1,29 +1,28 @@
-import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
 import {
   Image,
   Pressable,
-  SafeAreaView,
   ScrollView,
   Text,
   TextInput,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { calculate } from "../components/calculator/calculate";
 import { styles } from "../components/ui/styles";
+
+const CUOTAS_OPTIONS = [6, 12, 18, 24, 30, 36, 42, 48, 54, 60] as const;
 
 export default function HomeScreen() {
   const [valorTotal, setValorTotal] = useState("");
   const [inicial, setInicial] = useState("");
-  const [cuotas, setCuotas] = useState("24");
+  const [cuotas, setCuotas] = useState(24);
   const [resultado, setResultado] = useState<number | null>(null);
 
   const handleCalcular = () => {
     const total = Number(valorTotal);
     const pagoInicial = Number(inicial);
-    const numeroCuotas = Number(cuotas);
-
-    const cuota = calculate(total, pagoInicial, numeroCuotas);
+    const cuota = calculate(total, pagoInicial, cuotas);
 
     setResultado(cuota);
   };
@@ -65,15 +64,32 @@ export default function HomeScreen() {
 
           <Text style={styles.label}>Cuotas</Text>
 
-          <View style={styles.pickerContainer}>
-            <Picker
-              selectedValue={cuotas}
-              onValueChange={(itemValue) => setCuotas(itemValue)}
-            >
-              <Picker.Item label="12 cuotas" value="12" />
-              <Picker.Item label="24 cuotas" value="24" />
-              <Picker.Item label="36 cuotas" value="36" />
-            </Picker>
+          <View style={styles.cuotasSelector}>
+            {CUOTAS_OPTIONS.map((option) => {
+              const isSelected = cuotas === option;
+
+              return (
+                <Pressable
+                  key={option}
+                  accessibilityRole="radio"
+                  accessibilityState={{ checked: isSelected }}
+                  onPress={() => setCuotas(option)}
+                  style={[
+                    styles.cuotaOption,
+                    isSelected && styles.cuotaOptionSelected,
+                  ]}
+                >
+                  <Text
+                    style={[
+                      styles.cuotaOptionText,
+                      isSelected && styles.cuotaOptionTextSelected,
+                    ]}
+                  >
+                    {option}
+                  </Text>
+                </Pressable>
+              );
+            })}
           </View>
 
           <Pressable style={styles.button} onPress={handleCalcular}>

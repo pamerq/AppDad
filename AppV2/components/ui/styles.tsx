@@ -58,14 +58,36 @@ export const styles = StyleSheet.create({
     color: "#3C3C3C",
   },
 
-  pickerContainer: {
+  cuotasSelector: {
     height: 60,
     borderWidth: 1,
     borderColor: "#D9D9D9",
     borderRadius: 18,
-    justifyContent: "center",
-    overflow: "hidden",
+    flexDirection: "row",
+    padding: 4,
+    gap: 4,
     backgroundColor: "#FFF",
+  },
+
+  cuotaOption: {
+    flex: 1,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  cuotaOptionSelected: {
+    backgroundColor: "#0D7A42",
+  },
+
+  cuotaOptionText: {
+    color: "#3C3C3C",
+    fontSize: 18,
+    fontWeight: "600",
+  },
+
+  cuotaOptionTextSelected: {
+    color: "#FFF",
   },
 
   button: {
