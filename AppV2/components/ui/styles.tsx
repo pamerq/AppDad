@@ -59,18 +59,21 @@ export const styles = StyleSheet.create({
   },
 
   cuotasSelector: {
-    height: 60,
+    minHeight: 108,
     borderWidth: 1,
     borderColor: "#D9D9D9",
     borderRadius: 18,
     flexDirection: "row",
+    flexWrap: "wrap",
     padding: 4,
     gap: 4,
     backgroundColor: "#FFF",
   },
 
   cuotaOption: {
-    flex: 1,
+    flexBasis: "18%",
+    flexGrow: 1,
+    height: 47,
     borderRadius: 14,
     alignItems: "center",
     justifyContent: "center",
